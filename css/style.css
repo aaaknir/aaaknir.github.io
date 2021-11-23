@@ -1,0 +1,268 @@
+
+/* Лучше загружать не все стили, а только необходимые */
+
+/* Вместо rgb() лучше использовать hex */
+
+/**
+ Стили лучше распологать в таком порядке:
+
+    1. *
+    2. Теги (от глобальных к локальным). html -> body -> header, main, footer -> article, section, .. -> h1, p, .. -> ..
+    3. Классы по иерархии
+        a. :default (не пишется)
+        b. :hover
+        c. :active
+        d. :focus
+        e. Остальные псевдоклассы
+    4. Идентификаторы
+ **/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f8f8;
+    font-family: FuturaBookC, sans-serif;
+}
+
+.container {
+    height: 500px;
+    width: 1000px;
+    margin: auto;
+}
+
+header, footer, article {
+    display: block;
+    float: left;
+    width: 1000px;
+}
+
+a.knopka {
+    color: #fff; /* цвет текста */
+    text-decoration: none; /* убирать подчёркивание у ссылок */
+    user-select: none; /* убирать выделение текста */
+    background: rgb(212,75,56); /* фон кнопки */
+    padding: .7em 1.5em; /* отступ от текста */
+    outline: none; /* убирать контур в Mozilla */
+}
+
+a.knopka:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
+a.knopka:active { background: rgb(152,15,0); } /* при нажатии */
+
+a.knopka_rub {
+    color: #fff; /* цвет текста */
+    text-decoration: none; /* убирать подчёркивание у ссылок */
+    user-select: none; /* убирать выделение текста */
+    background: rgb(180, 72, 53); /* фон кнопки */
+    padding: .7em 1.5em; /* отступ от текста */
+    outline: none; /* убирать контур в Mozilla */
+}
+
+/*Шапка*/
+
+header {
+    background-color: lightpink;
+    margin: 0;
+    padding: 0;
+    max-height: 100px;
+}
+
+header a {
+    color: #787878;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 5px solid transparent;
+}
+
+header a:hover {
+    color: black;
+    background-color: #eaeaea;
+    border: 5px solid #eaeaea;
+    border-radius: 3px;
+    box-shadow: 5px 5px 5px #c88b95;
+}
+
+.menu_a {
+    margin-top: 50px;
+    float: right;
+    margin-right: 10px;
+}
+
+header img {
+    margin-left: 10px;
+    height: 100px;
+ }
+
+.h_center {
+    text-align: center;
+}
+
+article {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*Страничка каталога*/
+
+.catalog_block {
+    display: block;
+    float: left;
+    margin-right: 5px;
+    text-align: center;
+}
+
+/*Страничка продукта*/
+
+.product_block {
+    display: block;
+    float: left;
+    margin: 10px;
+}
+
+.product_block_1 {
+    display: block;
+    float: left;
+    margin-top: 20px;
+    width: 650px;
+    text-align: center;
+}
+
+.product_block_1 table {
+    width: 100%;
+}
+
+.h_product {
+    color: black;
+    font-size: 18px;
+    background-color: #eaeaea;
+    font-weight: 400;
+}
+
+.h_product_img, .h_product_img_1 {
+    border: 5px solid silver;
+}
+
+.h_product_img {
+    width: 300px;
+    height: 300px;
+}
+
+.h_product_img_1 {
+    width: 150px;
+    height: 150px;
+}
+
+.h_product_img:hover, .h_product_img_1:hover {
+    border: 5px solid transparent;
+}
+
+.h_product_fd {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+.h_product_ol {
+    color: #505050;
+    font-size: 16px;
+    line-height: 20px;
+    list-style-type: none;
+    text-align: center;
+}
+
+.h_product_sd {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+/*Страничка Контакты*/
+
+.contact_block {
+    display: block;
+    float: left;
+    margin: 10px;
+    padding: 10px;
+    min-width: 300px;
+    background-color: #ececec;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #CCC;
+}
+
+.contact_block h2 {
+    text-align: center;
+}
+
+input {
+    text-transform: capitalize;
+    height: 20px;
+    width: 200px;
+    font-size: 14px;
+}
+
+input:focus {
+    color: black;
+    background-color: #ccc;
+}
+
+#text_field {
+    height: 100px;
+    width: 300px;
+}
+
+.contact_ol {
+    list-style-type: none;
+}
+
+.addr {
+    font-style: italic;
+    font-weight: bolder;
+}
+
+button[type=submit] {
+    float: right;
+    width: 100px;
+    height: 30px;
+    box-shadow: 5px 5px 5px #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+iframe {
+    width: 100%;
+    height: 374px;
+    box-shadow: 5px 5px 5px #ccc;
+}
+
+.address {
+    display: block;
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    min-width: 300px;
+    background-color: #ececec;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #CCC;
+    font-style: normal;
+ь 
+}
+
+/*Футер*/
+
+footer {
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+    height: 40px;
+}
+
+footer span {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
